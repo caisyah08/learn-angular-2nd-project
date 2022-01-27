@@ -1,6 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  /*
+    1. selector tidak terbatas hanya di element saja. contoh ( app-servers adalah element ) tapi juga bisa utk attribute, class, dll
+    source : https://angular.io/api/core/Directive#selector
+  */
+
+  /* 2. contohnya jika kita ingin menggunakannya sbg attribute di html, kita bisa memanggil selectornya sbg attribute dengan cara
+    [app-servers] dan tempelkan sbg attribute di element html
+  */
+  // selector: '[app-servers]',
+
+  /* 3. contohnya jika kita ingin menggunakannya sbg class di html, kita bisa memanggil selectornya sbg attribute dengan cara
+    [app-servers] dan tempelkan sbg attribute di element html
+  */
+  // selector: '.app-servers',
+  // 4. tapi untuk component, pada umumnya yg digunakan adalah element
   selector: 'app-servers',
   template: `
   <app-server></app-server>
