@@ -5,6 +5,15 @@
         yg ada di properti class ServersComponent yaitu allowNewServer
  -->
 <button [disabled]="!allowNewServer" class="btn btn-primary">Input</button>
+<p [innerText]="allowNewServer"></p>
+<!-- 
+    Q: Kapan menggunakan string interpolation dan kapan menggunakan property binding ?
+    A: 
+        String interpolation :
+            ketika ingin mengeluarkan sesuatu dari template, print beberapa text di sana
+        Property Binding : 
+            ketika ingin mengubah property bisa saja properti element html ataupun directive 
+-->
 
 <!-- kita bisa memanggil Component berulang kali dan tidak hanya sekali
     di bawah ini adalah contoh dari pemakaian Component app-server
