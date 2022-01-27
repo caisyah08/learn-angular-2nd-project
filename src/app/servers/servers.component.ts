@@ -26,6 +26,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  serverCreationStatus = 'No Server Was Created!';
+  
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -35,4 +37,8 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //penamaan on di sini untuk memberitahu kalau method di bawah ini akan di trigger di template ini
+  onCreateServer() {
+    this.serverCreationStatus = 'Server Was Created!' 
+  }
 }

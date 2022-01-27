@@ -1,11 +1,19 @@
 <!-- 
     1.  property binding mengikat attribute/properties pada element html supaya bisa kita ubah secara dinamis di ts
-    2.  cara penulisannya adalah [namaProperty]
+    2.  cara penulisannya adalah [namaProperty] = "namaProperty"
     3.  Pada kasus dibawah dia bisa terdisable dengan mengikuti logik/nilai(value) 
         yg ada di properti class ServersComponent yaitu allowNewServer
+    
+    4. event binding mengikat HTML event dan mengeksekusi event sesuai dengan kondisi yg kita set di ts.
+    5. cara penulisannya adalah (namaEvent) = "namaMethod()""
  -->
-<button [disabled]="!allowNewServer" class="btn btn-primary">Input</button>
-<p [innerText]="allowNewServer"></p>
+<button 
+    [disabled]="!allowNewServer" 
+    class="btn btn-primary"
+    (click)="onCreateServer()">Input</button>
+<p>{{serverCreationStatus}}</p>
+
+<!-- <p [innerText]="allowNewServer"></p> -->
 <!-- 
     Q: Kapan menggunakan string interpolation dan kapan menggunakan property binding ?
     A: 
