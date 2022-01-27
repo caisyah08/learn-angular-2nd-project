@@ -24,4 +24,17 @@ import { Component } from "@angular/core";
 export class ServerComponent{
     // class disini adalah tempat kamu menaruh logika-mu 
     // di sini class ServerComponent akan menciptakan objek berdasarkan logika-mu dan di ekspor supaya bisa dipakai di tempat lain.
+    serverId: number = 10;
+    serverStatus: string = 'offline';
+
+    /* 
+        di bawah ini adalah method. Cara penulisan method pada typescript ada di source bawah
+        source: https://www.typescriptlang.org/docs/handbook/2/classes.html#methods
+    */
+    getServerStatus() {
+        //  Q:  kenapa pakai this dan egk langsung serverStatus ? 
+        //  A:  dalam method, typescript akan mencari variabel serverStatus yang ada di luar dari class ServerComponent bila tanpa this
+        //      makanya this harus disertakan juga biar dia mencari variabel yg ada di dalam class
+        return this.serverStatus;
+    }
 }
