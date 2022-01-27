@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
 /*  1. we need component to use other directives whether it is custom or builtin in the @Component annotation ( source : https://stackoverflow.com/questions/34613065/what-is-the-difference-between-component-and-directive) 
     2. that's why we write it down below ( source : https://angular.io/guide/component-overview)
     4. just empty component wouldn't do, it's nothing valuable for angular so we need to add 
-        4.1 selector
+        4.1 selector ( optional )
         // source : https://www.pluralsight.com/guides/understanding-the-purpose-and-use-of-the-selector-in-angular
             4.1.1 Selector berfungsi untuk mengidentifikasi setiap component secara unik di component tree 
             4.1.2 representasi dari component ini di HTML DOM
