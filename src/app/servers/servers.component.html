@@ -1,3 +1,11 @@
+<label>Server Name</label>
+<!-- untuk memberitahu kalau parameter tsbt adalah event maka harus memakai reserved name yaitu $event -->
+<input 
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+>
+<p>{{serverName}}</p>
 <!-- 
     1.  property binding mengikat attribute/properties pada element html supaya bisa kita ubah secara dinamis di ts
     2.  cara penulisannya adalah [namaProperty] = "namaProperty"

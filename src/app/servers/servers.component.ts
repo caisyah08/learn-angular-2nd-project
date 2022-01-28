@@ -27,7 +27,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No Server Was Created!';
-  
+  serverName = '';
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -40,5 +41,16 @@ export class ServersComponent implements OnInit {
   //penamaan on di sini untuk memberitahu kalau method di bawah ini akan di trigger di template ini
   onCreateServer() {
     this.serverCreationStatus = 'Server Was Created!' 
+  }
+
+  //  Q;  kenapa pakai HTMLInputElement ?
+  //  A:  https://stackoverflow.com/questions/52325814/why-we-are-using-htmlinputelement-in-typescript
+  /*  
+    pada typescript parameternya harus dideklarasikan apa tipeny 
+    (source : https://www.typescriptlang.org/docs/handbook/2/classes.html#overriding-methods)
+    karena ini event, maka dideklarasi sbg event
+  */
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 }
