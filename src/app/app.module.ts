@@ -6,6 +6,7 @@
 */
 
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 // 4. itulah mengapa ServerComponent juga perlu di import di bawah.
@@ -34,7 +35,8 @@ import { ServersComponent } from './servers/servers.component';
   //  A: pada dasarnya di angular, kita bisa memecah aplikasi kita menjadi beberapa module, nah imports di sini, kita memasukkan
   //     module2 lain diluar dari module file ini ke file ini 
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

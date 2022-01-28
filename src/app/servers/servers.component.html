@@ -5,6 +5,17 @@
     class="form-control"
     (input)="onUpdateServerName($event)"
 >
+
+<!-- 
+   1.   untuk two-ways data binding, penulisannya adalah [(ngModel)] = "namaProperty" 
+   2.   jadi prinsipnya kalau ada data yg terupdate di ts, di template yg ditunjukan ke user juga akan terupdate
+        seandainya user memberikan input baru, data di ts juga akan terupdate sesuai dengan user
+-->
+<input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"
+>
 <p>{{serverName}}</p>
 <!-- 
     1.  property binding mengikat attribute/properties pada element html supaya bisa kita ubah secara dinamis di ts
